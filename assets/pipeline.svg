@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="260" viewBox="0 0 960 260" role="img" aria-labelledby="t d">
+<title id="t">Pipeline seguro</title>
+<desc id="d">Diagrama animado de un pipeline DevSecOps: commit, lint y tests, escaneo de secretos, analisis estatico, revision de dependencias con CVE, firma con SBOM y deploy. Las compuertas de secretos y dependencias pueden abortar el build. La observabilidad retroalimenta al commit.</desc>
+<defs>
+  <linearGradient id="pan" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#0b1014"/><stop offset="100%" stop-color="#05070a"/>
+  </linearGradient>
+  <filter id="gl" x="-120%" y="-120%" width="340%" height="340%">
+    <feGaussianBlur stdDeviation="3.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="pc"><rect x="1" y="1" width="958" height="258" rx="12"/></clipPath>
+  <path id="track" d="M83.0 112 H 877.0"/>
+</defs>
+<style>
+  text{font-family:ui-monospace,SFMono-Regular,'JetBrains Mono',Menlo,Consolas,monospace}
+  @keyframes flow{to{stroke-dashoffset:-320}}
+  .wire{animation:flow 6s linear infinite}
+  @keyframes on{0%{opacity:0}4%{opacity:1}16%{opacity:.55}26%{opacity:0}100%{opacity:0}}
+  .hl{opacity:0;animation:on 7.6s linear infinite}
+  @keyframes lab{0%{opacity:.45}4%{opacity:1}30%{opacity:1}60%{opacity:.45}100%{opacity:.45}}
+  .nd{animation:lab 7.6s linear infinite}
+  @keyframes abf{0%,100%{opacity:0}5%{opacity:.95}14%{opacity:.2}22%{opacity:.8}34%{opacity:0}}
+  .ab{opacity:0;animation:abf 7.6s linear infinite}
+  @keyframes abx{0%,100%{opacity:.18}6%{opacity:1}30%{opacity:.18}}
+  .abox{animation:abx 7.6s linear infinite;animation-delay:2.1s}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  .cur{animation:blink 1.05s step-end infinite}
+  @keyframes bp{0%,100%{opacity:.25}50%{opacity:1}}
+  .bp{animation:bp 2.2s ease-in-out infinite}
+</style>
+<g clip-path="url(#pc)">
+  <rect x="1" y="1" width="958" height="258" rx="12" fill="url(#pan)"/>
+
+  <text x="24" y="32" font-size="12.5" fill="#7f9aa8">
+    <tspan fill="#00ff9c">pipeline</tspan><tspan>@secnode:~$ </tspan><tspan fill="#9affd8">build --break --harden --ship</tspan><tspan class="cur" fill="#00ff9c">&#9608;</tspan>
+  </text>
+  <g text-anchor="end">
+    <text x="916" y="32" font-size="11.5" fill="#4b6b7a">gates: 2 activos</text>
+    <circle class="bp" cx="934" cy="27" r="4" fill="#00ff9c" filter="url(#gl)"/>
+  </g>
+
+  <path class="wire" d="M83.0 112 H 877.0" fill="none" stroke="#1b5a44" stroke-width="2" stroke-dasharray="7 7"/>
+  <g class="nd" style="animation-delay:0.0s"><rect x="24.0" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#174a3a"/><rect class="hl" x="24.0" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <g class="nd" style="animation-delay:1.27s"><rect x="156.3" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#174a3a"/><rect class="hl" x="156.3" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <g class="nd" style="animation-delay:2.53s"><rect x="288.7" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#ff7a8f"/><rect class="hl" x="288.7" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <g class="nd" style="animation-delay:3.8s"><rect x="421.0" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#174a3a"/><rect class="hl" x="421.0" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <g class="nd" style="animation-delay:5.07s"><rect x="553.3" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#ff7a8f"/><rect class="hl" x="553.3" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <g class="nd" style="animation-delay:6.33s"><rect x="685.7" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#174a3a"/><rect class="hl" x="685.7" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <g class="nd" style="animation-delay:7.6s"><rect x="818.0" y="88.0" width="118" height="48" rx="9" fill="#0a1016" stroke="#174a3a"/><rect class="hl" x="818.0" y="88.0" width="118" height="48" rx="9" fill="none" stroke="#00ff9c" stroke-width="1.8"/></g>
+  <path class="ab" style="animation-delay:2.53s" d="M347.7 136 V 176 H 470" fill="none" stroke="#ff3b5c" stroke-width="1.6" stroke-dasharray="5 5"/>
+  <path class="ab" style="animation-delay:5.07s" d="M612.3 136 V 176 H 470" fill="none" stroke="#ff3b5c" stroke-width="1.6" stroke-dasharray="5 5"/>
+
+  <g class="abox">
+    <rect x="382" y="176" width="176" height="34" rx="8" fill="#17060b" stroke="#ff3b5c" stroke-width="1.4"/>
+    <text x="470" y="198" text-anchor="middle" font-size="11.5" fill="#ff8fa3">exit 1 &#183; build abortado</text>
+  </g>
+
+  <path class="wire" d="M877.0 150 V 232 H 83.0 V 150" fill="none" stroke="#1b5a44" stroke-width="1.4" stroke-dasharray="4 8" opacity="0.8"/>
+  <rect x="355.0" y="214" width="250" height="18" rx="4" fill="#05070a"/>
+  <text x="480.0" y="227" text-anchor="middle" font-size="11" fill="#4b6b7a">observabilidad &#8594; feedback al commit</text>
+
+  <circle r="5.5" fill="#00ff9c" filter="url(#gl)">
+    <animateMotion dur="7.6s" repeatCount="indefinite" rotate="auto"><mpath href="#track"/></animateMotion>
+  </circle>
+  <circle r="3" fill="#9affd8" opacity="0.65">
+    <animateMotion dur="7.6s" begin="-0.16s" repeatCount="indefinite"><mpath href="#track"/></animateMotion>
+  </circle>
+  <circle r="2" fill="#9affd8" opacity="0.35">
+    <animateMotion dur="7.6s" begin="-0.32s" repeatCount="indefinite"><mpath href="#track"/></animateMotion>
+  </circle>
+
+  <g class="nd" style="animation-delay:0.0s" text-anchor="middle"><text x="83.0" y="106.0" font-size="15" fill="#6ee7b7" opacity="0.9">⎇</text><text x="83.0" y="125.0" font-size="11.5" fill="#c9d1d9">commit</text></g>
+  <g class="nd" style="animation-delay:1.27s" text-anchor="middle"><text x="215.3" y="106.0" font-size="15" fill="#6ee7b7" opacity="0.9">✓</text><text x="215.3" y="125.0" font-size="11.5" fill="#c9d1d9">lint + tests</text></g>
+  <g class="nd" style="animation-delay:2.53s" text-anchor="middle"><text x="347.7" y="106.0" font-size="15" fill="#ff9fb0" opacity="0.9">⚿</text><text x="347.7" y="125.0" font-size="11.5" fill="#c9d1d9">secret scan</text></g>
+  <g class="nd" style="animation-delay:3.8s" text-anchor="middle"><text x="480.0" y="106.0" font-size="15" fill="#6ee7b7" opacity="0.9">⌘</text><text x="480.0" y="125.0" font-size="11.5" fill="#c9d1d9">SAST</text></g>
+  <g class="nd" style="animation-delay:5.07s" text-anchor="middle"><text x="612.3" y="106.0" font-size="15" fill="#ff9fb0" opacity="0.9">⚑</text><text x="612.3" y="125.0" font-size="11.5" fill="#c9d1d9">deps / CVE</text></g>
+  <g class="nd" style="animation-delay:6.33s" text-anchor="middle"><text x="744.7" y="106.0" font-size="15" fill="#6ee7b7" opacity="0.9">✓</text><text x="744.7" y="125.0" font-size="11.5" fill="#c9d1d9">firma + SBOM</text></g>
+  <g class="nd" style="animation-delay:7.6s" text-anchor="middle"><text x="877.0" y="106.0" font-size="15" fill="#6ee7b7" opacity="0.9">▶</text><text x="877.0" y="125.0" font-size="11.5" fill="#c9d1d9">deploy</text></g>
+</g>
+<rect x="0.5" y="0.5" width="959" height="259" rx="12" fill="none" stroke="#174a3a"/>
+</svg>
